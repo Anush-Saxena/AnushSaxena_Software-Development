@@ -4,23 +4,25 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class PayloadDetails {
+public class PayloadEntity {
     @Id
-    private String shipperId = "";
-    private String loadingPoint = "";
-    private String unloadingPoint = "";
-    private String productType = "";
-    private String truckType = "";
-    private String noOfTrucks = "";
-    private String weight = "";
-    private String comment = "";
-    private String date = "";
+    private String shipperId;
+    private String loadingPoint;
+    private String unloadingPoint;
+    private String productType;
+    private String truckType;
+    private String noOfTrucks;
+    private String weight;
+    private String comment;
+    private String date;
 
-    public PayloadDetails() {
-        super();
+    public PayloadEntity() {
     }
 
-    public PayloadDetails(String shipperId, String loadingPoint, String unloadingPoint, String productType, String truckType, String noOfTrucks, String weight, String comment, String date) {
+    // This part of the code contains the unwanted constructor
+    /*
+    public PayloadEntity(String shipperId, String loadingPoint, String unloadingPoint, String productType, String truckType, String noOfTrucks, String weight, String comment, String date) {
+        super();
         this.shipperId = shipperId;
         this.loadingPoint = loadingPoint;
         this.unloadingPoint = unloadingPoint;
@@ -31,15 +33,7 @@ public class PayloadDetails {
         this.comment = comment;
         this.date = date;
     }
-
-    public String getShipperId() {
-        return shipperId;
-    }
-
-    public void setShipperId(String shipperId) {
-        this.shipperId = shipperId;
-    }
-
+    */
     public String getLoadingPoint() {
         return loadingPoint;
     }
@@ -103,4 +97,14 @@ public class PayloadDetails {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public String getShipperId() {
+        return shipperId;
+    }
+
+    public void setShipperId(String shipperId) {
+        this.shipperId = shipperId;
+    }
+
+
 }
