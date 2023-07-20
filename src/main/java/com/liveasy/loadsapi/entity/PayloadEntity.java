@@ -6,15 +6,15 @@ import jakarta.persistence.Id;
 @Entity
 public class PayloadEntity {
     @Id
-    private String shipperId;
-    private String loadingPoint;
-    private String unloadingPoint;
-    private String productType;
-    private String truckType;
-    private String noOfTrucks;
-    private String weight;
-    private String comment;
-    private String date;
+    private String shipperId = "";
+    private String loadingPoint = "";
+    private String unloadingPoint = "";
+    private String productType = "";
+    private String truckType = "";
+    private String noOfTrucks = "";
+    private String weight = "";
+    private String comment = "";
+    private String date = "";
 
     public PayloadEntity() {
     }

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.client.HttpClientErrorException;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Service
@@ -15,13 +14,22 @@ public class PayloadService {
     @Autowired
     private PayloadRepo payloadRepo;
 
-    public PayloadEntity addLoadDetails(PayloadEntity requestPayload){
-        Optional<PayloadEntity> payloadEntity = payloadRepo.findById(requestPayload.getShipperId());
-        if (payloadEntity.isEmpty()) {
-            payloadRepo.save(requestPayload);
-            return requestPayload;
+    public boolean valid(PayloadEntity validateEntity){
+        return !(validateEntity.getShipperId().equals("") || validateEntity.getDate().equals("") || validateEntity.getLoadingPoint().equals("") ||
+                validateEntity.getProductType().equals("") || validateEntity.getTruckType().equals("") || validateEntity.getUnloadingPoint().equals("")
+                || validateEntity.getNoOfTrucks().equals("") || validateEntity.getWeight().equals(""));
+    }
+
+    public String addLoadDetails(PayloadEntity requestPayload){
+        if (valid(requestPayload)){
+            Optional<PayloadEntity> payloadEntity = payloadRepo.findById(requestPayload.getShipperId());
+            if (payloadEntity.isEmpty()) {
+                payloadRepo.save(requestPayload);
+                return "Payload Details added successfully";
+            }
+            return "shipperId already exists! ";
         }
-        throw new HttpClientErrorException(HttpStatus.BAD_REQUEST," shipperId already Exists! ");
+        return "Some fields are left empty! Please Check";
     }
 
     public PayloadEntity getLoadDetails(String shipperId){
@@ -31,22 +39,24 @@ public class PayloadService {
         }
         throw new HttpClientErrorException(HttpStatus.BAD_REQUEST," shipperId doesn't Exists! ");
     }
-    public PayloadEntity putLoadDetails(String shipperId, PayloadEntity requestPayload){
-        Optional<PayloadEntity> payloadEntity = payloadRepo.findById(shipperId);
-        if (payloadEntity.isPresent()){
-            requestPayload.setShipperId(shipperId);
-            payloadRepo.save(requestPayload);
-            return requestPayload;
+    public String putLoadDetails(String shipperId, PayloadEntity requestPayload){
+        if (valid(requestPayload)){
+            Optional<PayloadEntity> payloadEntity = payloadRepo.findById(shipperId);
+            if (payloadEntity.isPresent()) {
+                payloadRepo.save(requestPayload);
+                return "Details Updated Successfully";
+            }
+            return "shipperId doesn't exists";
         }
-        throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "shipperId doesn't exists");
+        return "Some fields are left empty! Please Check";
     }
     public String deleteLoadDetails( String shipperId){
-        try {
+        if (payloadRepo.existsById(shipperId)){
             payloadRepo.deleteById(shipperId);
             return " Shipping Details Deleted ";
         }
-        catch (Exception e){
-            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "shipperId doesn't exists");
+        else{
+            return "shipperId doesn't exists!";
         }
     }
 }
