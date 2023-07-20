@@ -1,0 +1,603 @@
+{
+	"info": {
+		"_postman_id": "6471c5a6-7bc3-44e5-8a96-3f8371c4ce00",
+		"name": "AnushSaxena_Software Developement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27664372"
+	},
+	"item": [
+		{
+			"name": "Get Payload",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Path Variable",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/load/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load",
+								"12345"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:31:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shipperId\": \"12345\",\n    \"loadingPoint\": \"Aurangabad\",\n    \"unloadingPoint\": \"Bandra\",\n    \"productType\": \"No info\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"4\",\n    \"weight\": \"120 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"12/08/23\"\n}"
+				},
+				{
+					"name": "Query Parameter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/load?shipperId=12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load"
+							],
+							"query": [
+								{
+									"key": "shipperId",
+									"value": "12345"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:32:05 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shipperId\": \"12345\",\n    \"loadingPoint\": \"Aurangabad\",\n    \"unloadingPoint\": \"Bandra\",\n    \"productType\": \"No info\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"4\",\n    \"weight\": \"120 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"12/08/23\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Payload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shipperId\": \"12345\",\n    \"loadingPoint\": \"Aurangabad\",\n    \"unloadingPoint\": \"Bandra\",\n    \"productType\": \"No info\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"4\",\n    \"weight\": \"120 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"12/08/23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/load",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"load"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "new Id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shipperId\": \"12345\",\n    \"loadingPoint\": \"Aurangabad\",\n    \"unloadingPoint\": \"Bandra\",\n    \"productType\": \"No info\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"4\",\n    \"weight\": \"120 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"12/08/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/load",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:14:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shipperId\": \"12345\",\n    \"loadingPoint\": \"Aurangabad\",\n    \"unloadingPoint\": \"Bandra\",\n    \"productType\": \"No info\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"4\",\n    \"weight\": \"120 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"12/08/23\"\n}"
+				},
+				{
+					"name": "shipperId exists already",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shipperId\": \"12345\",\n    \"loadingPoint\": \"Aurangabad\",\n    \"unloadingPoint\": \"Bandra\",\n    \"productType\": \"No info\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"4\",\n    \"weight\": \"120 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"12/08/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/load",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:27:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "shipperId already exists! "
+				},
+				{
+					"name": "empty fields",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"shipperId\": \"\",\n    \"loadingPoint\": \"Aurangabad\",\n    \"unloadingPoint\": \"Bandra\",\n    \"productType\": \"No info\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"4\",\n    \"weight\": \"120 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"12/08/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/load",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:28:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Some fields are left empty! Please Check"
+				}
+			]
+		},
+		{
+			"name": "Update Payload",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"loadingPoint\": \"\",\n    \"unloadingPoint\": \"Aurangabad\",\n    \"productType\": \"Nothing new\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"2\",\n    \"weight\": \"200 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"19/08/23\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/load/12345",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"load",
+						"12345"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Id exists",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loadingPoint\": \"Jaipur\",\n    \"unloadingPoint\": \"Aurangabad\",\n    \"productType\": \"Nothing new\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"2\",\n    \"weight\": \"200 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"19/08/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/load/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load",
+								"12345"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:36:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Details Updated Successfully"
+				},
+				{
+					"name": "Id not exists",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loadingPoint\": \"Jaipur\",\n    \"unloadingPoint\": \"Aurangabad\",\n    \"productType\": \"Nothing new\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"2\",\n    \"weight\": \"200 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"19/08/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/load/123234",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load",
+								"123234"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:37:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "shipperId doesn't exists"
+				},
+				{
+					"name": "empty fields",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loadingPoint\": \"\",\n    \"unloadingPoint\": \"Aurangabad\",\n    \"productType\": \"Nothing new\",\n    \"truckType\": \"12 wheeler\",\n    \"noOfTrucks\": \"2\",\n    \"weight\": \"200 tonnes\",\n    \"comment\": \"It is a Comment\",\n    \"date\": \"19/08/23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/load/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load",
+								"12345"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:38:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Some fields are left empty! Please Check"
+				}
+			]
+		},
+		{
+			"name": "Delete Payload",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Id Exist",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/load/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load",
+								"12345"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:46:57 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": " Shipping Details Deleted "
+				},
+				{
+					"name": "id doesn't exists",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/load/12345",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"load",
+								"12345"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 19 Jul 2023 20:54:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "shipperId doesn't exists!"
+				}
+			]
+		}
+	]
+}
